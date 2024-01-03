@@ -1,0 +1,57 @@
+#include <iostream>
+
+using namespace std;
+class eb
+{
+    int units,tot;
+    void getdata()
+    {
+        cin>>units;
+    }
+    void cal()
+    {
+        if(units<=100)
+        {
+           tot=0;
+        }
+        else if(units>100 && units<=200)
+        {
+            tot=(units-100)*3;
+        }
+        else if(units>200 && units<=300)
+        {
+            tot=((units-200)*6)+300;
+            
+        }
+        else if(units>300 && units<=400)
+        {
+             tot=(((units-300)*12)+900);
+        }
+        else if(units>400 && units<=500)
+        {
+             tot=(((units-400)*15)+2100);
+        } 
+        else if(units>500)
+        {
+             tot=(((units-500)*30)+3600);
+        }
+    }
+    public:
+    void disp()
+    {
+        getdata();
+        cal();
+        cout<<tot;
+        
+    }
+};
+
+
+int main()
+{
+    eb obj;
+    obj.disp();
+    
+    
+    return 0;
+}
